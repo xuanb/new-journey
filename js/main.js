@@ -84,7 +84,26 @@
             }
         });
     };
-
+    var playMusic = function () {
+        $("#js-playmusic").on("click", function (event) {
+            event.preventDefault();
+            var audio = $("#sound")[0];
+            audio.play();
+            $("#js-playmusic").hide();
+            $("#js-stopmusic").css("display", "table");
+            return false;
+        });
+    };
+    var stopMusic = function () {
+        $("#js-stopmusic").on("click", function (event) {
+            event.preventDefault();
+            var audio = $("#sound")[0];
+            audio.pause();
+            $("#js-stopmusic").hide();
+            $("#js-playmusic").css("display", "table");
+            return false;
+        });
+    };
     var createTimeline = function () {
         $(".timeLine").timeLine({
             mainColor: "#890025",
@@ -109,5 +128,7 @@
         goToTop();
         loaderPage();
         magnifPopup();
+        playMusic();
+        stopMusic();
     });
 })();
