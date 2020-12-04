@@ -119,6 +119,11 @@
                 enabled: true,
             },
         });
+        $(".popup-modal").magnificPopup({
+            type: "inline",
+            preloader: false,
+            closeBtnInside: true,
+        });
     };
 
     $(function () {

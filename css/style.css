@@ -1195,6 +1195,7 @@ h1, h2, h3, h4, h5, h6, figure {
   width: 100%;
   height: 100%;
   display: block;
+  z-index: -2;
 }
 
 .stars {
@@ -1204,7 +1205,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 .clouds {
   background: transparent url(../images/clouds.png) repeat top center;
-  z-index: 3;
+  /* z-index: 3; */
 
   -moz-animation: move-clouds-back 200s linear infinite;
   -ms-animation: move-clouds-back 200s linear infinite;
@@ -1224,4 +1225,21 @@ h1, h2, h3, h4, h5, h6, figure {
 .title h3 {
   color: #ffffff;
   margin: 10px 0px;
+}
+
+.signature{
+  font-family: "Engagement";
+  text-align: right;
+  color: #F14E95;
+}
+#navigation-modal{
+  background: white;
+  width: 50%;
+  padding:20px;
+  margin:auto;
+}
+@media screen and (max-width: 768px) {
+#navigation-modal {
+  width: 80%;
+}
 }
